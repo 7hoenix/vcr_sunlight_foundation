@@ -3,7 +3,7 @@ class SunlightService
 
   def initialize
     @connection = Hurley::Client.new("http://congress.api.sunlightfoundation.com")
-    connection.query[:apikey] = "a85ea01c31264bae8f43bbdc3826f69c"
+    connection.query[:apikey] = ENV["sunlight_api_key"]
   end
 
   def legislators(params)
